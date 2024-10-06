@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+  
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 640px; /* Size of the grid */
+    height: 640px;
+  }
+  
+.square {
+    background-color: #ff0000;
+    border: 1px solid #000000;
+    width: calc(100% / 16 - 2px); /* Each square takes 1/16th of the container's width minus 2px for the borders */
+    height: calc(100% / 16 - 2px); /* Similarly for height */
+    box-sizing: border-box; /* Ensure the border is included in the square's size */
+}
+  
+.square:hover {
+    background-color: #ffffff; /* Changes color on hover */
+}
+
+button{
+    display: flex;
+    align-items: center;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column; /* Stack the button and grid vertically */
+    align-items: center;
+    width: 100%; /* Take full width */
+    margin-top: 20px; /* Add some space from the top */
+}
