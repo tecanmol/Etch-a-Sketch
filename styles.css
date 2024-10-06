@@ -3,12 +3,20 @@
     padding: 0;
     box-sizing: border-box;
   }
+
+  h1 {
+    margin-top: 10px; /* Reduced margin for better placement */
+    color: #000000;
+    font-size: 2rem; /* Larger font size */
+    text-align: center; /* Centered text */
+}
   
 body {
     display: flex;
-    justify-content: center;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: flex-start; /* Align content at the top */
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     background-color: #f0f0f0;
 }
   
@@ -34,6 +42,14 @@ body {
 button{
     display: flex;
     align-items: center;
+    margin: 10px;
+    background-color: #000000;
+    color: white;
+    border-radius: 4px;
+    padding: 15px 30px;
+    margin: 20px; /* Increased margin for spacing */
+    font-size: 1.2rem; /* Larger font size for button */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
 }
 
 .main-container {
