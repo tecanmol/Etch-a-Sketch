@@ -14,7 +14,7 @@ createGrid(16);
 
 function createGrid(squaresPerSide){
     container.innerHTML = '';
-    const squareSize = 1080 / squaresPerSide;
+    const squareSize = 640 / squaresPerSide;
     
 for (let i = 0; i < squaresPerSide*squaresPerSide; i++) {
     const square = document.createElement('div');
@@ -24,7 +24,15 @@ for (let i = 0; i < squaresPerSide*squaresPerSide; i++) {
     
 
     square.addEventListener("mouseover" , () =>{
-        square.style.backgroundColor = '#000'; // Change color to black on hover
+        const random_RGB_values = [
+            Math.floor(Math.random() * 256),
+            Math.floor(Math.random() * 256),
+            Math.floor(Math.random() * 256)
+        ];
+    
+        // Convert the array to a valid rgb string
+        const rgbColor = `rgb(${random_RGB_values[0]}, ${random_RGB_values[1]}, ${random_RGB_values[2]})`;
+        square.style.backgroundColor = rgbColor; // Change color to black on hover
     });
     container.appendChild(square);
   }
